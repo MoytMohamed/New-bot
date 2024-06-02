@@ -1,14 +1,4 @@
-<p align="center">  
-  <a href="">
-    <img alt="Hospital" height="300" src="">
-    <h1 align="center">GURU-BOT 2.O</h1>
-  </a>
-</p>
-<p align="center">
-<a href=""><img title="Author" src=""></a>
-<p/>
 
-####  
 whatsapp bot.
 
 ***
