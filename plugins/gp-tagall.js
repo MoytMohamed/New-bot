@@ -2,7 +2,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetad
   let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
   m.reply(
     `*──── ╯ نــداء الــدجـيـتال ╭ ────*/n--⧽ جــروب : *${groupMetadata.subject}*\n--⧽ اعــضـاء : *${participants.length}*${text ? `\n--⧽ رســالــه : ${text}\n` : ''}\n┐━━━≼ الأعــضـاء ≽━━━\n` +
-      users.map(v => '╯ @' + v.replace(/@.+/, '') + ' ╭').join`\n` +
+      users.map(v => '`╯ @' + v.replace(/@.+/, '') + ' ╭`').join`\n` +
       '\n┘━━━≼ الأعــضـاء ≽━━━',
     null,
     {
