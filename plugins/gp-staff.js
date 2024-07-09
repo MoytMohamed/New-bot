@@ -9,11 +9,10 @@ let handler = async (m, { conn, participants, groupMetadata, args }) => {
     m.chat.split`-`[0] + '@s.whatsapp.net'
 
   let text = `
-≡ *GROUP ADMINS* _${groupMetadata.subject}_
+*──── ╯ نــداء الــمــشـرفــين ╭ ────*
+*--⧽ جــروب : _${groupMetadata.subject}_*
 
-┌─⊷ *ADMINS*
-▢ ${listAdmin}
-└───────────
+${listAdmin}
 `.trim()
   conn.sendFile(m.chat, pp, 'staff.png', text, m, false, {
     mentions: [...groupAdmins.map(v => v.id), owner],
@@ -21,6 +20,6 @@ let handler = async (m, { conn, participants, groupMetadata, args }) => {
 }
 handler.help = ['staff']
 handler.tags = ['group']
-handler.command = ['staff', 'admins', 'listadmin']
+handler.command = ['admins', 'ادمن']
 handler.group = true
 export default handler
