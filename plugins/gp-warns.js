@@ -6,19 +6,18 @@ let handler = async (m, { conn, args, groupMetadata }) => {
       : m.fromMe
         ? conn.user.jid
         : m.sender
-  if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
+  if (!(who in global.db.data.users)) throw `*❞لــم أجــد اي بــيـانـات لــهذا الــمـسـتـخدم !❝*`
   let warn = global.db.data.users[who].warn
   let name = conn.getName(who)
   m.reply(`
- *WARNINGS*
-
-▢ *Name :* ${name} 
-▢ *Warns :* ${warn}`)
+ *──── ╯ إنــذارات ╭ ────*
+*--⧽ الأســم :* ${name} 
+*--⧽ الإنــذارات :* ${warn}`)
 }
 
 handler.help = ['warns']
 handler.tags = ['group']
-handler.command = ['warns']
+handler.command = ['الانذارات', 'الإنذارات']
 handler.group = true
 
 export default handler
